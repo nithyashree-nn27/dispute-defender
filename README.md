@@ -105,7 +105,7 @@ Add these images to `docs/screenshots/`. Placeholders are already in place below
 ### AI Assistant page
 <!-- SCREENSHOT: The "AI Assistant" page showing the "Local AI status" panel.
      Save as: docs/screenshots/ai-assistant.png -->
-![AI Assistant](docs/screenshots/ai-assistant.png)
+![AI Assistant](docs/screenshots/ai-analysis.png)
 
 ---
 
