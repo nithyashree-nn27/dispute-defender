@@ -1,0 +1,99 @@
+{
+  "planHash": "aaaa05fb9cf4e3d8273cc51bd00134020471ea8f634d841733657526ea55b4f7",
+  "phase": "standalone",
+  "recordedAtUtc": "2026-11-12T12:10:16.4015709Z",
+  "retryCount": 0,
+  "resetBaseline": false,
+  "complete": true,
+  "result": {
+    "setupSucceeded": true,
+    "setupDurationMs": 0,
+    "setupFailureOutput": null,
+    "assertions": [
+      {
+        "name": "build",
+        "kind": "process",
+        "verificationMethod": "exit-code",
+        "passed": true,
+        "timedOut": false,
+        "skipped": false,
+        "skippedReason": null,
+        "exitCode": 0,
+        "outputSample": "\r\n\u003E backend@1.0.0 build\r\n\u003E tsc\r\n\r\n",
+        "durationMs": 990
+      },
+      {
+        "name": "tests-pass",
+        "kind": "process",
+        "verificationMethod": "test-results",
+        "passed": true,
+        "timedOut": false,
+        "skipped": false,
+        "skippedReason": null,
+        "exitCode": 0,
+        "outputSample": "\r\n\u003E backend@1.0.0 test\r\n\u003E tsx --test src/*.test.ts\r\n\r\n\u2714 asks Ollama for a schema-constrained analysis using dispute evidence (29.6147ms)\r\n\u2714 includes buyer-submitted evidence separately from seller evidence (1.1365ms)\r\n\u2714 keeps item-not-received and wrong-item-delivered categories distinct (0.8073ms)\r\n\u2714 reports unavailable Ollama and provides model setup guidance (0.6159ms)\r\n\u2714 reports Ollama as ready when the configured model is installed (0.5805ms)\r\n\u2714 rejects malformed or incomplete model output (2.4683ms)\r\n\u2714 explains when Ollama cannot find the requested model (0.8872ms)\r\n\u2714 extracts only requested seller evidence (1.4358ms)\r\n\u2714 handles missing and malformed evidence data (0.1541ms)\r\n\u2714 extracts buyer evidence content and downloadable document metadata (0.4932ms)\r\n\u2714 returns only buyer document URLs by evidence and document indexes (0.2138ms)\r\n\u2714 maps supported PayPal evidence types (0.1261ms)\r\n\u2714 normalizes and maps alias evidence types (0.1293ms)\r\n\u2714 matches invoice and message evidence (0.2593ms)\r\n\u2714 reports missing requested evidence (1.1292ms)\r\n\u2714 tracking without delivery confirmation needs verification (0.2749ms)\r\n\u2714 tracking records require carrier and tracking number to match (0.3043ms)\r\n\u2714 unknown requested evidence needs manual verification (0.1723ms)\r\n\u2714 disputes without requests return an empty checklist (0.1285ms)\r\n\u2714 sends an evidence image as multipart and evidence details as JSON (35.7572ms)\r\n\u2714 downloads a buyer document only from the configured PayPal origin (1.2608ms)\r\n\u2139 tests 21\r\n\u2139 suites 0\r\n\u2139 pass 21\r\n\u2139 fail 0\r\n\u2139 cancelled 0\r\n\u2139 skipped 0\r\n\u2139 todo 0\r\n\u2139 duration_ms 274.9267\r\n",
+        "durationMs": 1121,
+        "testResults": {
+          "testFramework": "unknown",
+          "runnerDetectedFrom": "none",
+          "testsTotal": 0,
+          "testsPassed": 0,
+          "testsFailed": 0,
+          "testsSkipped": 0,
+          "parseFailed": true
+        }
+      },
+      {
+        "name": "health-endpoint",
+        "kind": "http-probe",
+        "verificationMethod": "http-status",
+        "passed": true,
+        "timedOut": false,
+        "skipped": false,
+        "skippedReason": null,
+        "exitCode": null,
+        "outputSample": "HTTP 200\n{\u0022status\u0022:\u0022healthy\u0022}\n--- server output ---\n\r\n\u003E backend@1.0.0 start\r\n\u003E node dist/server.js\r\n\r\nDispute Defender backend running on http://localhost:3101\r\n",
+        "durationMs": 1070
+      }
+    ],
+    "executions": [
+      {
+        "source": "build",
+        "resolvedExecutable": "D:\\node.js\\npm.CMD",
+        "args": [
+          "run",
+          "build"
+        ],
+        "cwd": "D:\\AI-project\\dispute-defender\\backend",
+        "env": {},
+        "prependPath": [],
+        "platform": "win32"
+      },
+      {
+        "source": "tests-pass",
+        "resolvedExecutable": "D:\\node.js\\npm.CMD",
+        "args": [
+          "test"
+        ],
+        "cwd": "D:\\AI-project\\dispute-defender\\backend",
+        "env": {},
+        "prependPath": [],
+        "platform": "win32"
+      },
+      {
+        "source": "health-endpoint",
+        "resolvedExecutable": "D:\\node.js\\npm.CMD",
+        "args": [
+          "run",
+          "start"
+        ],
+        "cwd": "D:\\AI-project\\dispute-defender\\backend",
+        "env": {
+          "PORT": "3101"
+        },
+        "prependPath": [],
+        "platform": "win32"
+      }
+    ]
+  }
+}
